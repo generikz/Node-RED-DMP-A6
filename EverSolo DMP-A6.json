@@ -1,0 +1,1121 @@
+[
+    {
+        "id": "dcd5083574abb366",
+        "type": "tab",
+        "label": "EverSolo DMP-A6",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "85af8e7be5957b63",
+        "type": "group",
+        "z": "dcd5083574abb366",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "af8cebcf83405cd1",
+            "ad908cd22280a041",
+            "1a742d3b91e90d04",
+            "22bc76eddba7b5ed",
+            "5cd94175da858066",
+            "771b849bf6465465",
+            "ace852532ca427dc",
+            "8d35bfe9e8bee64b",
+            "b938e482030338e8",
+            "a845ebdb482b2086",
+            "1c7bc3278fd14af0",
+            "6f5e27514851f4b6",
+            "9e2b77e0b6fb04eb"
+        ],
+        "x": 34,
+        "y": 259,
+        "w": 472,
+        "h": 502
+    },
+    {
+        "id": "ea2328d2e6c77d05",
+        "type": "group",
+        "z": "dcd5083574abb366",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "83117b5375901b4d",
+            "d33752a13a0d3715",
+            "7c1bf71a2a3896ba",
+            "3d4fb77a5e9a81db",
+            "48b119a2b67cad9d"
+        ],
+        "x": 34,
+        "y": 59,
+        "w": 472,
+        "h": 202
+    },
+    {
+        "id": "81c6913c5a19e09d",
+        "type": "group",
+        "z": "dcd5083574abb366",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "3613ed7e945f0640",
+            "2181ac4f1d1c0d69",
+            "47d6bba0c673a522",
+            "34bfb2a6cb031fda"
+        ],
+        "x": 614,
+        "y": 259,
+        "w": 492,
+        "h": 162
+    },
+    {
+        "id": "2c89ef794475292f",
+        "type": "group",
+        "z": "dcd5083574abb366",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "b841ec0044fc540b",
+            "842c67e6e56ef241",
+            "14b0e17eaa394c5a",
+            "30ae79659bd13605",
+            "e072c098c1c518a5",
+            "1ef6c15c38a99071",
+            "60637080140c1351",
+            "f5166b3fd78030ef"
+        ],
+        "x": 614,
+        "y": 519,
+        "w": 832,
+        "h": 282
+    },
+    {
+        "id": "c623bb81ddf44d03",
+        "type": "group",
+        "z": "dcd5083574abb366",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "b9ceef460ae66beb",
+            "0d81f5a5e55db54f",
+            "417aef363a38c499",
+            "7a771036bf109279",
+            "f3aebed7b5030d55"
+        ],
+        "x": 614,
+        "y": 59,
+        "w": 492,
+        "h": 202
+    },
+    {
+        "id": "5a7629f3ce91da74",
+        "type": "comment",
+        "z": "dcd5083574abb366",
+        "name": "DMP-A6",
+        "info": "",
+        "x": 120,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b841ec0044fc540b",
+        "type": "http request",
+        "z": "dcd5083574abb366",
+        "g": "2c89ef794475292f",
+        "name": "DMP-A6 API",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "body",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 750,
+        "y": 640,
+        "wires": [
+            [
+                "30ae79659bd13605",
+                "e072c098c1c518a5"
+            ]
+        ]
+    },
+    {
+        "id": "842c67e6e56ef241",
+        "type": "function",
+        "z": "dcd5083574abb366",
+        "g": "2c89ef794475292f",
+        "name": "Customize API Here",
+        "func": "const DMP_A6_IP = '192.168.10.137';\nconst DMP_A6_Port = '9529';\nconst DMP_A6_baseURL = 'http://' + DMP_A6_IP + ':' + DMP_A6_Port + '/';\n\nmsg.url = DMP_A6_baseURL + msg.payload;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 560,
+        "wires": [
+            [
+                "14b0e17eaa394c5a",
+                "b841ec0044fc540b"
+            ]
+        ]
+    },
+    {
+        "id": "14b0e17eaa394c5a",
+        "type": "debug",
+        "z": "dcd5083574abb366",
+        "g": "2c89ef794475292f",
+        "name": "Check HTTP Request",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "7a771036bf109279",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "c623bb81ddf44d03",
+        "name": "Mute ON",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setMuteVolume?isMute=1",
+        "payloadType": "str",
+        "x": 720,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "30ae79659bd13605",
+        "type": "debug",
+        "z": "dcd5083574abb366",
+        "g": "2c89ef794475292f",
+        "name": "Check HTTP Response",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1290,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "f3aebed7b5030d55",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "c623bb81ddf44d03",
+        "name": "Mute OFF",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setMuteVolume?isMute=0",
+        "payloadType": "str",
+        "x": 720,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "af8cebcf83405cd1",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "85af8e7be5957b63",
+        "name": "Ouput XLR",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setOutInputList?tag=XLR&index=1",
+        "payloadType": "str",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "ace852532ca427dc"
+            ]
+        ]
+    },
+    {
+        "id": "ad908cd22280a041",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "85af8e7be5957b63",
+        "name": "Output RCA",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setOutInputList?tag=RCA&index=1",
+        "payloadType": "str",
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "ace852532ca427dc"
+            ]
+        ]
+    },
+    {
+        "id": "1a742d3b91e90d04",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "85af8e7be5957b63",
+        "name": "Output XLR/RCA",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setOutInputList?tag=XLRRCA&index=1",
+        "payloadType": "str",
+        "x": 160,
+        "y": 380,
+        "wires": [
+            [
+                "ace852532ca427dc"
+            ]
+        ]
+    },
+    {
+        "id": "22bc76eddba7b5ed",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "85af8e7be5957b63",
+        "name": "Output HDMI",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setOutInputList?tag=HDMI&index=1",
+        "payloadType": "str",
+        "x": 150,
+        "y": 420,
+        "wires": [
+            [
+                "ace852532ca427dc"
+            ]
+        ]
+    },
+    {
+        "id": "5cd94175da858066",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "85af8e7be5957b63",
+        "name": "Output SPDIF",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setOutInputList?tag=SPDIF&index=1",
+        "payloadType": "str",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "ace852532ca427dc"
+            ]
+        ]
+    },
+    {
+        "id": "771b849bf6465465",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "85af8e7be5957b63",
+        "name": "Output USB",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setOutInputList?tag=USB&index=1",
+        "payloadType": "str",
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "ace852532ca427dc"
+            ]
+        ]
+    },
+    {
+        "id": "be076101ce38b421",
+        "type": "link out",
+        "z": "dcd5083574abb366",
+        "name": "DMP-A6 Output IN",
+        "mode": "link",
+        "links": [
+            "2eae16b086cdcda8"
+        ],
+        "x": 535,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2eae16b086cdcda8",
+        "type": "link in",
+        "z": "dcd5083574abb366",
+        "name": "DMP-A6 HTTP GET",
+        "links": [
+            "be076101ce38b421",
+            "0692544015c26c41",
+            "d049797383dc2445",
+            "f83e74ea948b174e"
+        ],
+        "x": 575,
+        "y": 560,
+        "wires": [
+            [
+                "842c67e6e56ef241"
+            ]
+        ]
+    },
+    {
+        "id": "ace852532ca427dc",
+        "type": "change",
+        "z": "dcd5083574abb366",
+        "g": "85af8e7be5957b63",
+        "name": "flow = input/ouput",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flow",
+                "pt": "msg",
+                "to": "inout",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 300,
+        "wires": [
+            [
+                "be076101ce38b421"
+            ]
+        ]
+    },
+    {
+        "id": "e072c098c1c518a5",
+        "type": "switch",
+        "z": "dcd5083574abb366",
+        "g": "2c89ef794475292f",
+        "name": "Switch FLOW",
+        "property": "flow",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "inout",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "control",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "play",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "volume",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 4,
+        "x": 760,
+        "y": 740,
+        "wires": [
+            [
+                "60637080140c1351"
+            ],
+            [
+                "1ef6c15c38a99071"
+            ],
+            [
+                "1ef6c15c38a99071"
+            ],
+            [
+                "1ef6c15c38a99071"
+            ]
+        ]
+    },
+    {
+        "id": "1ef6c15c38a99071",
+        "type": "debug",
+        "z": "dcd5083574abb366",
+        "g": "2c89ef794475292f",
+        "name": "Status",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "60637080140c1351",
+        "type": "function",
+        "z": "dcd5083574abb366",
+        "g": "2c89ef794475292f",
+        "name": "input/output",
+        "func": "let buffer = msg.payload;\n\nconst response = {\n    input: \"\",\n    output: \"\",\n    specs: \"\"\n};\n\nif(msg.statusCode == 200)\n{\n    response.input = buffer.inputData[buffer.inputIndex].name;\n    response.output = buffer.outputData[buffer.outputIndex].name;\n    response.specs = buffer.outputInfo.format + ' / ' + buffer.outputInfo.sampleRate;\n\n    msg.response = response;\n\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 720,
+        "wires": [
+            [
+                "f5166b3fd78030ef"
+            ]
+        ]
+    },
+    {
+        "id": "83117b5375901b4d",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "ea2328d2e6c77d05",
+        "name": "Power OFF",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setPowerOption?tag=poweroff",
+        "payloadType": "str",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "48b119a2b67cad9d"
+            ]
+        ]
+    },
+    {
+        "id": "d33752a13a0d3715",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "ea2328d2e6c77d05",
+        "name": "Reboot",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setPowerOption?tag=reboot",
+        "payloadType": "str",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "48b119a2b67cad9d"
+            ]
+        ]
+    },
+    {
+        "id": "7c1bf71a2a3896ba",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "ea2328d2e6c77d05",
+        "name": "Display Mode",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/changVUDisplay",
+        "payloadType": "str",
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "48b119a2b67cad9d"
+            ]
+        ]
+    },
+    {
+        "id": "3d4fb77a5e9a81db",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "ea2328d2e6c77d05",
+        "name": "Screen On/Off",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setPowerOption?tag=screen",
+        "payloadType": "str",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "48b119a2b67cad9d"
+            ]
+        ]
+    },
+    {
+        "id": "0692544015c26c41",
+        "type": "link out",
+        "z": "dcd5083574abb366",
+        "name": "DMP-A6 Output IN",
+        "mode": "link",
+        "links": [
+            "2eae16b086cdcda8"
+        ],
+        "x": 535,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "48b119a2b67cad9d",
+        "type": "change",
+        "z": "dcd5083574abb366",
+        "g": "ea2328d2e6c77d05",
+        "name": "flow = control",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flow",
+                "pt": "msg",
+                "to": "control",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "0692544015c26c41"
+            ]
+        ]
+    },
+    {
+        "id": "8d35bfe9e8bee64b",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "85af8e7be5957b63",
+        "name": "Ouput XLR",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setOutInputList?tag=XLR&index=1",
+        "payloadType": "str",
+        "x": 160,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b938e482030338e8",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "85af8e7be5957b63",
+        "name": "Input PLAYER",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setInputList?tag=XMOS&index=0",
+        "payloadType": "str",
+        "x": 150,
+        "y": 560,
+        "wires": [
+            [
+                "ace852532ca427dc"
+            ]
+        ]
+    },
+    {
+        "id": "a845ebdb482b2086",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "85af8e7be5957b63",
+        "name": "Input BLUETOOTH",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setInputList?tag=BT&index=1",
+        "payloadType": "str",
+        "x": 170,
+        "y": 600,
+        "wires": [
+            [
+                "ace852532ca427dc"
+            ]
+        ]
+    },
+    {
+        "id": "1c7bc3278fd14af0",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "85af8e7be5957b63",
+        "name": "Input USB-C",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setOutInputList?tag=HDMI&index=1",
+        "payloadType": "str",
+        "x": 150,
+        "y": 640,
+        "wires": [
+            [
+                "ace852532ca427dc"
+            ]
+        ]
+    },
+    {
+        "id": "6f5e27514851f4b6",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "85af8e7be5957b63",
+        "name": "Input TOSLINK",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setInputList?tag=SPDIF&index=3",
+        "payloadType": "str",
+        "x": 160,
+        "y": 680,
+        "wires": [
+            [
+                "ace852532ca427dc"
+            ]
+        ]
+    },
+    {
+        "id": "9e2b77e0b6fb04eb",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "85af8e7be5957b63",
+        "name": "Input COAX",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/setInputList?tag=RCA&index=4",
+        "payloadType": "str",
+        "x": 150,
+        "y": 720,
+        "wires": [
+            [
+                "ace852532ca427dc"
+            ]
+        ]
+    },
+    {
+        "id": "d049797383dc2445",
+        "type": "link out",
+        "z": "dcd5083574abb366",
+        "name": "DMP-A6 Play IN",
+        "mode": "link",
+        "links": [
+            "2eae16b086cdcda8"
+        ],
+        "x": 1135,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "3613ed7e945f0640",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "81c6913c5a19e09d",
+        "name": "Play/Pause",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/playOrPause",
+        "payloadType": "str",
+        "x": 730,
+        "y": 300,
+        "wires": [
+            [
+                "34bfb2a6cb031fda"
+            ]
+        ]
+    },
+    {
+        "id": "2181ac4f1d1c0d69",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "81c6913c5a19e09d",
+        "name": "PREV",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/playLast",
+        "payloadType": "str",
+        "x": 710,
+        "y": 340,
+        "wires": [
+            [
+                "34bfb2a6cb031fda"
+            ]
+        ]
+    },
+    {
+        "id": "47d6bba0c673a522",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "81c6913c5a19e09d",
+        "name": "NEXT",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/playNext",
+        "payloadType": "str",
+        "x": 710,
+        "y": 380,
+        "wires": [
+            [
+                "34bfb2a6cb031fda"
+            ]
+        ]
+    },
+    {
+        "id": "34bfb2a6cb031fda",
+        "type": "change",
+        "z": "dcd5083574abb366",
+        "g": "81c6913c5a19e09d",
+        "name": "flow = play",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flow",
+                "pt": "msg",
+                "to": "play",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 300,
+        "wires": [
+            [
+                "d049797383dc2445"
+            ]
+        ]
+    },
+    {
+        "id": "f5166b3fd78030ef",
+        "type": "debug",
+        "z": "dcd5083574abb366",
+        "g": "2c89ef794475292f",
+        "name": "Decoded Response",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "response",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1290,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "f83e74ea948b174e",
+        "type": "link out",
+        "z": "dcd5083574abb366",
+        "name": "DMP-A6 Volume IN",
+        "mode": "link",
+        "links": [
+            "2eae16b086cdcda8"
+        ],
+        "x": 1135,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b9ceef460ae66beb",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "c623bb81ddf44d03",
+        "name": "Volume UP",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooControlCenter/RemoteControl/sendkey?key=Key.VolumeUp",
+        "payloadType": "str",
+        "x": 720,
+        "y": 100,
+        "wires": [
+            [
+                "417aef363a38c499"
+            ]
+        ]
+    },
+    {
+        "id": "0d81f5a5e55db54f",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "c623bb81ddf44d03",
+        "name": "Volume DOWN",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooControlCenter/RemoteControl/sendkey?key=Key.VolumeDown",
+        "payloadType": "str",
+        "x": 740,
+        "y": 140,
+        "wires": [
+            [
+                "417aef363a38c499"
+            ]
+        ]
+    },
+    {
+        "id": "417aef363a38c499",
+        "type": "change",
+        "z": "dcd5083574abb366",
+        "g": "c623bb81ddf44d03",
+        "name": "flow = volume",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flow",
+                "pt": "msg",
+                "to": "volume",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 100,
+        "wires": [
+            [
+                "f83e74ea948b174e"
+            ]
+        ]
+    }
+]
