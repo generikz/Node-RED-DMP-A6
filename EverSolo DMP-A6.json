@@ -36,7 +36,7 @@
             "9e2b77e0b6fb04eb"
         ],
         "x": 34,
-        "y": 259,
+        "y": 299,
         "w": 472,
         "h": 502
     },
@@ -58,12 +58,13 @@
             "d33752a13a0d3715",
             "7c1bf71a2a3896ba",
             "3d4fb77a5e9a81db",
-            "48b119a2b67cad9d"
+            "48b119a2b67cad9d",
+            "7d7467f755d41f89"
         ],
         "x": 34,
         "y": 59,
         "w": 472,
-        "h": 202
+        "h": 242
     },
     {
         "id": "81c6913c5a19e09d",
@@ -84,7 +85,7 @@
             "47d6bba0c673a522",
             "34bfb2a6cb031fda"
         ],
-        "x": 614,
+        "x": 594,
         "y": 259,
         "w": 492,
         "h": 162
@@ -112,9 +113,9 @@
             "60637080140c1351",
             "f5166b3fd78030ef"
         ],
-        "x": 614,
+        "x": 594,
         "y": 519,
-        "w": 832,
+        "w": 792,
         "h": 282
     },
     {
@@ -137,7 +138,7 @@
             "7a771036bf109279",
             "f3aebed7b5030d55"
         ],
-        "x": 614,
+        "x": 594,
         "y": 59,
         "w": 492,
         "h": 202
@@ -169,7 +170,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 750,
+        "x": 730,
         "y": 640,
         "wires": [
             [
@@ -191,7 +192,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 740,
+        "x": 720,
         "y": 560,
         "wires": [
             [
@@ -206,7 +207,7 @@
         "z": "dcd5083574abb366",
         "g": "2c89ef794475292f",
         "name": "Check HTTP Request",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -214,7 +215,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1280,
+        "x": 1220,
         "y": 560,
         "wires": []
     },
@@ -236,11 +237,12 @@
         "topic": "",
         "payload": "ZidooMusicControl/v2/setMuteVolume?isMute=1",
         "payloadType": "str",
-        "x": 720,
+        "x": 700,
         "y": 180,
         "wires": [
             []
-        ]
+        ],
+        "icon": "font-awesome/fa-volume-off"
     },
     {
         "id": "30ae79659bd13605",
@@ -248,7 +250,7 @@
         "z": "dcd5083574abb366",
         "g": "2c89ef794475292f",
         "name": "Check HTTP Response",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -256,7 +258,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1290,
+        "x": 1230,
         "y": 640,
         "wires": []
     },
@@ -278,11 +280,12 @@
         "topic": "",
         "payload": "ZidooMusicControl/v2/setMuteVolume?isMute=0",
         "payloadType": "str",
-        "x": 720,
+        "x": 700,
         "y": 220,
         "wires": [
             []
-        ]
+        ],
+        "icon": "font-awesome/fa-volume-up"
     },
     {
         "id": "af8cebcf83405cd1",
@@ -303,12 +306,13 @@
         "payload": "ZidooMusicControl/v2/setOutInputList?tag=XLR&index=1",
         "payloadType": "str",
         "x": 140,
-        "y": 300,
+        "y": 340,
         "wires": [
             [
                 "ace852532ca427dc"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-sign-out"
     },
     {
         "id": "ad908cd22280a041",
@@ -329,12 +333,13 @@
         "payload": "ZidooMusicControl/v2/setOutInputList?tag=RCA&index=1",
         "payloadType": "str",
         "x": 150,
-        "y": 340,
+        "y": 380,
         "wires": [
             [
                 "ace852532ca427dc"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-sign-out"
     },
     {
         "id": "1a742d3b91e90d04",
@@ -355,12 +360,13 @@
         "payload": "ZidooMusicControl/v2/setOutInputList?tag=XLRRCA&index=1",
         "payloadType": "str",
         "x": 160,
-        "y": 380,
+        "y": 420,
         "wires": [
             [
                 "ace852532ca427dc"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-sign-out"
     },
     {
         "id": "22bc76eddba7b5ed",
@@ -381,12 +387,13 @@
         "payload": "ZidooMusicControl/v2/setOutInputList?tag=HDMI&index=1",
         "payloadType": "str",
         "x": 150,
-        "y": 420,
+        "y": 460,
         "wires": [
             [
                 "ace852532ca427dc"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-sign-out"
     },
     {
         "id": "5cd94175da858066",
@@ -407,12 +414,13 @@
         "payload": "ZidooMusicControl/v2/setOutInputList?tag=SPDIF&index=1",
         "payloadType": "str",
         "x": 150,
-        "y": 460,
+        "y": 500,
         "wires": [
             [
                 "ace852532ca427dc"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-sign-out"
     },
     {
         "id": "771b849bf6465465",
@@ -433,12 +441,13 @@
         "payload": "ZidooMusicControl/v2/setOutInputList?tag=USB&index=1",
         "payloadType": "str",
         "x": 150,
-        "y": 500,
+        "y": 540,
         "wires": [
             [
                 "ace852532ca427dc"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-sign-out"
     },
     {
         "id": "be076101ce38b421",
@@ -450,7 +459,7 @@
             "2eae16b086cdcda8"
         ],
         "x": 535,
-        "y": 300,
+        "y": 340,
         "wires": []
     },
     {
@@ -464,7 +473,7 @@
             "d049797383dc2445",
             "f83e74ea948b174e"
         ],
-        "x": 575,
+        "x": 555,
         "y": 560,
         "wires": [
             [
@@ -493,7 +502,7 @@
         "to": "",
         "reg": false,
         "x": 390,
-        "y": 300,
+        "y": 340,
         "wires": [
             [
                 "be076101ce38b421"
@@ -533,7 +542,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 4,
-        "x": 760,
+        "x": 740,
         "y": 740,
         "wires": [
             [
@@ -564,7 +573,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1250,
+        "x": 1170,
         "y": 760,
         "wires": []
     },
@@ -581,7 +590,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1050,
+        "x": 1010,
         "y": 720,
         "wires": [
             [
@@ -613,7 +622,8 @@
             [
                 "48b119a2b67cad9d"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-power-off"
     },
     {
         "id": "d33752a13a0d3715",
@@ -639,7 +649,8 @@
             [
                 "48b119a2b67cad9d"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-refresh"
     },
     {
         "id": "7c1bf71a2a3896ba",
@@ -665,7 +676,8 @@
             [
                 "48b119a2b67cad9d"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-tv"
     },
     {
         "id": "3d4fb77a5e9a81db",
@@ -691,7 +703,8 @@
             [
                 "48b119a2b67cad9d"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-eye-slash"
     },
     {
         "id": "0692544015c26c41",
@@ -753,7 +766,7 @@
         "payload": "ZidooMusicControl/v2/setOutInputList?tag=XLR&index=1",
         "payloadType": "str",
         "x": 160,
-        "y": 560,
+        "y": 600,
         "wires": [
             []
         ]
@@ -777,12 +790,13 @@
         "payload": "ZidooMusicControl/v2/setInputList?tag=XMOS&index=0",
         "payloadType": "str",
         "x": 150,
-        "y": 560,
+        "y": 600,
         "wires": [
             [
                 "ace852532ca427dc"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-sign-in"
     },
     {
         "id": "a845ebdb482b2086",
@@ -803,12 +817,13 @@
         "payload": "ZidooMusicControl/v2/setInputList?tag=BT&index=1",
         "payloadType": "str",
         "x": 170,
-        "y": 600,
+        "y": 640,
         "wires": [
             [
                 "ace852532ca427dc"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-sign-in"
     },
     {
         "id": "1c7bc3278fd14af0",
@@ -829,12 +844,13 @@
         "payload": "ZidooMusicControl/v2/setOutInputList?tag=HDMI&index=1",
         "payloadType": "str",
         "x": 150,
-        "y": 640,
+        "y": 680,
         "wires": [
             [
                 "ace852532ca427dc"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-sign-in"
     },
     {
         "id": "6f5e27514851f4b6",
@@ -855,12 +871,13 @@
         "payload": "ZidooMusicControl/v2/setInputList?tag=SPDIF&index=3",
         "payloadType": "str",
         "x": 160,
-        "y": 680,
+        "y": 720,
         "wires": [
             [
                 "ace852532ca427dc"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-sign-in"
     },
     {
         "id": "9e2b77e0b6fb04eb",
@@ -881,12 +898,13 @@
         "payload": "ZidooMusicControl/v2/setInputList?tag=RCA&index=4",
         "payloadType": "str",
         "x": 150,
-        "y": 720,
+        "y": 760,
         "wires": [
             [
                 "ace852532ca427dc"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-sign-in"
     },
     {
         "id": "d049797383dc2445",
@@ -897,7 +915,7 @@
         "links": [
             "2eae16b086cdcda8"
         ],
-        "x": 1135,
+        "x": 1115,
         "y": 300,
         "wires": []
     },
@@ -919,20 +937,21 @@
         "topic": "",
         "payload": "ZidooMusicControl/v2/playOrPause",
         "payloadType": "str",
-        "x": 730,
+        "x": 710,
         "y": 300,
         "wires": [
             [
                 "34bfb2a6cb031fda"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-pause"
     },
     {
         "id": "2181ac4f1d1c0d69",
         "type": "inject",
         "z": "dcd5083574abb366",
         "g": "81c6913c5a19e09d",
-        "name": "PREV",
+        "name": "Previous",
         "props": [
             {
                 "p": "payload"
@@ -945,20 +964,21 @@
         "topic": "",
         "payload": "ZidooMusicControl/v2/playLast",
         "payloadType": "str",
-        "x": 710,
+        "x": 700,
         "y": 340,
         "wires": [
             [
                 "34bfb2a6cb031fda"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-fast-backward"
     },
     {
         "id": "47d6bba0c673a522",
         "type": "inject",
         "z": "dcd5083574abb366",
         "g": "81c6913c5a19e09d",
-        "name": "NEXT",
+        "name": "Next",
         "props": [
             {
                 "p": "payload"
@@ -971,13 +991,14 @@
         "topic": "",
         "payload": "ZidooMusicControl/v2/playNext",
         "payloadType": "str",
-        "x": 710,
+        "x": 690,
         "y": 380,
         "wires": [
             [
                 "34bfb2a6cb031fda"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-fast-forward"
     },
     {
         "id": "34bfb2a6cb031fda",
@@ -999,7 +1020,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1010,
+        "x": 990,
         "y": 300,
         "wires": [
             [
@@ -1021,7 +1042,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1290,
+        "x": 1210,
         "y": 720,
         "wires": []
     },
@@ -1034,7 +1055,7 @@
         "links": [
             "2eae16b086cdcda8"
         ],
-        "x": 1135,
+        "x": 1115,
         "y": 100,
         "wires": []
     },
@@ -1056,13 +1077,14 @@
         "topic": "",
         "payload": "ZidooControlCenter/RemoteControl/sendkey?key=Key.VolumeUp",
         "payloadType": "str",
-        "x": 720,
+        "x": 700,
         "y": 100,
         "wires": [
             [
                 "417aef363a38c499"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-chevron-circle-up"
     },
     {
         "id": "0d81f5a5e55db54f",
@@ -1082,13 +1104,14 @@
         "topic": "",
         "payload": "ZidooControlCenter/RemoteControl/sendkey?key=Key.VolumeDown",
         "payloadType": "str",
-        "x": 740,
+        "x": 720,
         "y": 140,
         "wires": [
             [
                 "417aef363a38c499"
             ]
-        ]
+        ],
+        "icon": "font-awesome/fa-chevron-circle-down"
     },
     {
         "id": "417aef363a38c499",
@@ -1110,12 +1133,39 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1000,
+        "x": 980,
         "y": 100,
         "wires": [
             [
                 "f83e74ea948b174e"
             ]
         ]
+    },
+    {
+        "id": "7d7467f755d41f89",
+        "type": "inject",
+        "z": "dcd5083574abb366",
+        "g": "ea2328d2e6c77d05",
+        "name": "Get State",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZidooMusicControl/v2/getState",
+        "payloadType": "str",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "48b119a2b67cad9d"
+            ]
+        ],
+        "icon": "font-awesome/fa-info-circle"
     }
 ]
